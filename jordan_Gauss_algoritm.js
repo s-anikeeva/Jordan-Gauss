@@ -1,3 +1,4 @@
+//Класс ограничений для матрицы ввода
 class matrixLimit{
     constructor(){
         this.XVarMin = 2;
@@ -21,7 +22,7 @@ class matrixLimit{
     }
 }
 
-
+//Метод решения Гаусса-Жордана
 function gaussJordan(matrix) {
     const rows = matrix.length;
     const cols = matrix[0].length;
