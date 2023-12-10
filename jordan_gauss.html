@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <script src="./jordan_Gauss_algoritm.js" lang="js"></script>
+    <script src="jordan_Gauss_form.js" lang="js"></script>
+    <head>
+        <title>Решение СЛАУ методом Жордана-Гаусса</title>
+    </head>
+    <body onload="pageOnLoad()">
+        <h2 style="text-align: center;">
+            Решение СЛАУ методом Жордана-Гаусса
+        </h2>
+        <div id="inputDiv">            
+            <label>Введите количество переменных</label>
+            <select id="xVariable"></select>
+            <br>
+            <label>Введите количество строк</label>
+            <select id="rows"></select>
+        </div>
+        <div id="inputTable">            
+        </div>
+        <button onclick = "drawInputTable()" id="drawTableButton">Ввести значения</button>
+
+
+    <h3 hidden="true" id="resultH">Решение:</h3>
+    <div id="resultDiv" hidden="true">
+    </div>
+
+    </body>
+</html>
+
