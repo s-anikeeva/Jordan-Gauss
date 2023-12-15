@@ -53,6 +53,7 @@ function transfrmMatrix(matrix, iteration){
     //Вывод устойчивой матрицы
     var transfrmIteration = 0 - (iteration + 1);    
     var tableSize = getTableSize(matrix);
+    tableSize.Columns = tableSize.Columns - 1;
     printIteration(transfrmIteration, tableSize);
     printMatrix(matrix, transfrmIteration);
 }
@@ -78,6 +79,7 @@ function reductionToEdentityMatrix(matrix, iteration){
         }
     }
 
+    tableSize.Columns = tableSize.Columns - 1;
     //Вывод результата
     printIteration(i+1, tableSize);
     printMatrix(matrix, iteration+1);
@@ -101,6 +103,9 @@ function printMatrix(matrix, iteration){
         for(var j = 0; j < matrix[0].length; j++){
             var tableDiv = document.getElementById("tableIteration" + iteration);
             var element = tableDiv.querySelectorAll("label#"+ "x" + i + "" + j);
+            if(j == matrix[0].length - 1){
+                element = tableDiv.querySelectorAll("label#"+ "b" + i);
+            }
             element[0].append(matrix[i][j]);
         }
     }
