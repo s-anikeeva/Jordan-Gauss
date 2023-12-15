@@ -2,6 +2,7 @@
 <html lang="ru">
     <script src="./jordan_Gauss_algoritm.js" lang="js"></script>
     <script src="jordan_Gauss_form.js" lang="js"></script>
+    <link rel="stylesheet" href="jordan_gauss.css">    
     <head>
         <title>Решение СЛАУ методом Жордана-Гаусса</title>
     </head>
@@ -16,9 +17,11 @@
             <label>Введите количество строк</label>
             <select id="rows"></select>
         </div>
-        <div id="inputTable">            
+        <div id="inputTable">                        
         </div>
-        <button onclick = "drawInputTable()" id="drawTableButton">Ввести значения</button>
+        <div id="buttonDiv">
+            <button onclick = "drawInputTable()" id="drawTableButton">Ввести значения</button>
+        </div>
 
 
     <h3 hidden="true" id="resultH">Решение:</h3>
