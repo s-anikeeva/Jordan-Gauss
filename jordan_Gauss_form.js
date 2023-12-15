@@ -23,12 +23,22 @@
         //Рисует таблицу ввода
         function drawInputTable(){
             var tableSize = GetTableSize();
-
+            disableSelectElements();
             PrintTable("inputTable", tableSize);
             button = document.getElementById("drawTableButton");
             button.setAttribute("id", "solveButton");
             button.setAttribute("onclick", "solve()");
             button.innerHTML = "Рассчитать";
+        }
+
+        //После нажатия кнопки "Ввести значения", делаем эелемент выбора данных для ввода, недоступным
+        function disableSelectElements(){           
+            var selectedElement = document.getElementsByTagName("select");
+            for(var i = 0; i < selectedElement.length; i++){
+                if(selectedElement[i]){
+                    selectedElement[i].setAttribute("disabled", "true");
+                }
+            }
         }
 
         //Возвращает размер таблицы

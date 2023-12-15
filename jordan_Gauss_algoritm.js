@@ -115,6 +115,7 @@ function printMatrix(matrix, iteration){
 function printIteration(iteration, tableSize){
 
     var parentDiv = document.createElement("div");
+    parentDiv.setAttribute("class", "container");
     var divElement = document.createElement("div");
     var labelElement = document.createElement("label");
     var tableIterationId = "tableIteration" + iteration;
